@@ -10,7 +10,7 @@ server.use((req, res, next) => {
     server.use(cors());
     next();
 });
-mi
+
 server.get ('/', (req,res) => {
     return res.json({filmes})
     });
