@@ -3,14 +3,13 @@ const server = express();
 const filmes = require ('./src/data/filmes.json')
 const port = process.env.PORT || 3000;
 
-/*server.get ('/usuario', (req,res) => {
-return res.json({usuario: 'PlugBot admin'})
+app.use((req, res, next) => {
+	
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
+    app.use(cors());
+    next();
 });
-*/
-/*server.get ('/', (req,res) => {
-    return res.json({usuario: 'Dados para o Gráfico do PlugDash'})
-    });
-*/
 
 server.get ('/', (req,res) => {
     return res.json({filmes})
