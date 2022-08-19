@@ -1,8 +1,6 @@
 const express = require('express');
 const server = express();
-
 const cors = require('cors');
-
 const filmes = require ('./src/data/filmes.json');
 const port = process.env.PORT || 3000;
 
