@@ -1,7 +1,11 @@
 const express = require('express');
 const server = express();
-const filmes = require ('./src/data/filmes.json')
+
+const cors = require('cors');
+
+const filmes = require ('./src/data/filmes.json');
 const port = process.env.PORT || 3000;
+
 
 server.use((req, res, next) => {
 	
